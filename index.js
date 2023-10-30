@@ -22,6 +22,9 @@ mongoose
 var Books = require("./models/book.js");
 const { error } = require("console");
 
+app.get("/", (req, res) => {
+  res.send("Hello this Siddu Putchala");
+});
 app.get("/viewallbooks", (req, res) => {
   Books.find({})
     .then((data) => {
